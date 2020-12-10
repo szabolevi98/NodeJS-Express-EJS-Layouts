@@ -1,4 +1,4 @@
-# NodeJS-Express-Handlebars
+# NodeJS-Express-EJS-Layouts
 Live demo: https://nodejs-express-ejs-layouts.herokuapp.com
 
 - `npm install` to install dependencies
