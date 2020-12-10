@@ -1,0 +1,9 @@
+<div class="row">
+    <% articles.forEach(function(article){%>
+        <div class="col-md-4">
+            <h2><%= article.name %></h2>
+            <p><%= article.description %></p>
+            <p><a class="btn btn-primary" href="/article/<%= article._id %>" role="button">View details &raquo;</a></p>
+        </div>
+    <% }); %> 
+</div>

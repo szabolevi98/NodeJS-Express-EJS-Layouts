@@ -1,0 +1,11 @@
+<div class="jumbotron">
+    <div class="container">
+        <% if(locals.article) { %>
+        <h1><%= article.name %></h1>
+        <p class="text-justify"><%= article.description %></p>
+        <% } else { %>  
+        <h1>Node EJS Project</h1>
+        <p>This is a basic NodeJS Express project with Embedded JavaScript templating and Mongoose object modeling tool.</p>
+        <% } %>
+    </div>
+</div>
