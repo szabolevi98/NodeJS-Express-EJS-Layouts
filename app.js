@@ -8,7 +8,7 @@ require('dotenv').config();
 
 //App config
 app.use(expressLayouts);
-app.set('layout', path.join(__dirname, 'layouts', 'without_jumbotron'));
+app.set('layout', path.join('layouts', 'without_jumbotron'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}));
