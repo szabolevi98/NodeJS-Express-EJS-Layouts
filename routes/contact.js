@@ -7,7 +7,7 @@ const messageModel = require(path.join(__dirname, '..', 'models', 'message'));
 //Route contact
 router.route('/')
 .get((req, res) => {
-    res.render('contact', { 
+    res.render('contact', {
         title: 'Contact',
         nav: 2
     });
