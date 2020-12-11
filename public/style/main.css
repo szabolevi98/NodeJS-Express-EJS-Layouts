@@ -13,7 +13,7 @@ h1, h2, h3, h4 {
 }
 
 .navbar-custom {
-    background-color: #1550cf;
+    background-color: #1559cf;
 }
 
 .navbar-custom .active {
@@ -27,4 +27,9 @@ h1, h2, h3, h4 {
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
     color: #ffffff;
+}
+
+.navbar-custom .navbar-toggler {
+	background-color: #0b48b3;
+	outline: none;
 }

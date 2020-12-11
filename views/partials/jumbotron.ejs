@@ -2,7 +2,7 @@
     <div class="container">
         <% if(locals.article) { %>
         <h1 class="display-4"><%= article.name %></h1>
-        <p class="text-justify lead"><%= article.description %></p>
+        <p class="text-justify lead"><strong><%= article.description %></strong></p>
         <% } else { %>  
         <h1 class="display-4">Node EJS Project</h1>
         <p class="text-justify lead"><strong>This is a basic NodeJS Express project with Embedded JavaScript templating and Mongoose object modeling tool.</strong></p>
