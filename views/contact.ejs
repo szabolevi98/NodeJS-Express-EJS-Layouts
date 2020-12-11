@@ -1,5 +1,5 @@
 <% if(locals.formSuccess) { %>
-<h2>Your message is recorded in the database!</h2>
+<h2 class="font-weight-normal">Your message is recorded in the database!</h2>
 <ul>
     <li><strong>Name:</strong> <%= message.name %></li>
     <li><strong>Email:</strong> <%= message.email %></li>
@@ -9,7 +9,7 @@
 </ul>
 <button class="btn btn-primary" onclick="window.location.href='/';">Home</button>
 <% } else { %>  
-<h2 class="pb-2">Send us a message!</h2>
+<h2 class="pb-2 font-weight-normal">Send us a message!</h2>
 <form action="/contact" method="post" id="contactForm">
     <div class="form-group">
         <label for="name">Fullname:</label>

@@ -1,7 +1,7 @@
 <div class="row pt-2">
     <% articles.forEach(function(article){%>
         <div class="col-md-4 mb-2">
-            <h2><%= article.name %></h2>
+            <h2 class="font-weight-normal"><%= article.name %></h2>
             <p class="text-justify"><%= article.description %></p>
             <p><a class="btn btn-primary" href="/article/<%= article._id %>" role="button">View details &raquo;</a></p>
         </div>
