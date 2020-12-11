@@ -13,5 +13,18 @@ h1, h2, h3, h4 {
 }
 
 .navbar-custom {
-    background-color: #2250b4;
+    background-color: #1550cf;
+}
+
+.navbar-custom .active {
+	font-weight: 500;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+	color: #ffffffbf;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
 }
