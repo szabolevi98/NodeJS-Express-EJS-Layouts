@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-md-12">
     <p class="text-justify"><%- article.full %></p>
+    <p><i>Date: <%= article.date %></i></p>
     <form action="/article/<%= article._id %>?_method=DELETE" method="post" class="deleteForm">
         <a class="btn btn-primary mr-1" href="/" role="button">&laquo; Go back</a>
         <input type="submit" value="Delete article" class="btn btn-primary mr-1" />

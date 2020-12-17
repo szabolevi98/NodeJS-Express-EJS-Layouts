@@ -8,12 +8,13 @@ const mongoose = require("mongoose");
 require('dotenv').config();
 
 //App config
-app.use(expressLayouts);
-app.set('layout', path.join('layouts', 'without_jumbotron'));
 app.set('view engine', 'ejs');
+app.set('layout', path.join('layouts', 'without_jumbotron'));
+app.use(expressLayouts);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+app.locals.rmWhitespace = true;
 
 //Routes (external)
 const routes = require(path.join(__dirname, 'routes', 'routes'));

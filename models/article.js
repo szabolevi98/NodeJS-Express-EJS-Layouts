@@ -15,6 +15,10 @@ const articleSchema = new mongoose.Schema(
         full: {
             type: String,
             required: true,
+        },
+        date: {
+            type: Date,
+            default: Date.now
         }
     }
 );
