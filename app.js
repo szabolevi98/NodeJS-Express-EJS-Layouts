@@ -28,7 +28,7 @@ mongoose.connect(process.env.DB_CONNECTION,
           console.log('Unable to connect to the database:', err.message);
       }
       else {
-          console.log('Connected to database successfully!');
+          console.log('Connected to the database successfully!');
       }
     }
 );
