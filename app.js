@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
+const methodOverride = require('method-override');
 const mongoose = require("mongoose");
 require('dotenv').config();
 
@@ -12,6 +13,7 @@ app.set('layout', path.join('layouts', 'without_jumbotron'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 
 //Routes (external)
 const routes = require(path.join(__dirname, 'routes', 'routes'));
