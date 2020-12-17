@@ -42,7 +42,11 @@ router.route('/')
         }
     }
     else {
-        res.send('Error: Missing details.');
+        res.render('error', { 
+            title: 'Error',
+            nav: '2',
+            specificMessage: 'Missing Details.'
+        });
     }
 });
 
