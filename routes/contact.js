@@ -20,8 +20,7 @@ router.route('/')
         subject: req.body.subject,
         comment: req.body.comment
     };
-    if (messageObject.name && messageObject.email && messageObject.phone && messageObject.subject && messageObject.comment)
-    {
+    if (messageObject.name && messageObject.email && messageObject.phone && messageObject.subject && messageObject.comment) {
         try {
             const postMessage = new messageModel(messageObject);
             await postMessage.save();

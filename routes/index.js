@@ -20,8 +20,7 @@ router.route('/')
       description: req.body.description,
       full: req.body.full.replace(/\r\n/g, '<br />')
   };
-  if (articleObject.name && articleObject.description && articleObject.full)
-  {
+  if (articleObject.name && articleObject.description && articleObject.full) {
       try {
           const postArticle = new articleModel(articleObject);
           await postArticle.save();
