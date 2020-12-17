@@ -28,10 +28,9 @@ router.route('/')
             res.render('contact', { 
                 title: 'Contact',
                 nav: 2,
-                formSuccess: true,
-                message: messageObject,
+                contactFormSuccess: true,
+                messageId: postMessage._id,
             });
-
         } 
         catch (err) {
             res.render('error', { 
@@ -48,6 +47,14 @@ router.route('/')
             specificMessage: 'Missing Details.'
         });
     }
+});
+
+router.get('/find/:id', async(req, res) => {
+    res.render('contact_find', {
+        title: 'Contact',
+        nav: 2,
+        message: await messageModel.findById(req.params.id),
+    });
 });
 
 module.exports = router;

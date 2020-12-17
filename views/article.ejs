@@ -1,10 +1,37 @@
 <div class="row">
     <div class="col-md-12">
-    <p class="text-justify"><%- article.full %></p>
-    <p><i>Date: <%= article.date %></i></p>
-    <form action="/article/<%= article._id %>?_method=DELETE" method="post" class="deleteForm">
+        <p class="text-justify"><%- article.full %></p>
+        <p><i>Date: <%= article.date %></i></p>
         <a class="btn btn-primary mr-1" href="/" role="button">&laquo; Go back</a>
-        <input type="submit" value="Delete article" class="btn btn-primary mr-1" />
-    </form>
+        <button type="button" class="btn btn-primary mr-1" data-toggle="modal" data-target="#deleteConfirmModal">Delete article</button>
+    </div>
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteConfirmModalLabel">Delete article</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form action="/article/<%= article._id %>?_method=DELETE" method="post" class="deleteForm">
+                <div class="modal-body">       
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter the secret password." class="form-control<% if (locals.wrongSecret) { %> is-invalid<% } %>" required />
+                        <% if (locals.wrongSecret) { %>
+                        <div class="invalid-feedback">
+                            Wrong password!
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <input type="submit" value="Delete" class="btn btn-primary" />
+                </div>
+            </form>
+          </div>
+        </div>
     </div>
 </div>

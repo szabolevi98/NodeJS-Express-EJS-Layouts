@@ -1,4 +1,3 @@
-<%- include('modals.ejs') %>
 <div class="jumbotron m-0 p-3">
     <div class="container">
         <% if (locals.article) { %>
@@ -7,7 +6,41 @@
         <% } else { %>  
         <h1 class="display-4">Node EJS Project</h1>
         <p class="text-justify lead"><strong>This is a basic NodeJS Express project with Embedded JavaScript templating and Mongoose object modeling tool.</strong></p>
+        <% if (locals.createArticle) { %>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create a new article</button>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="myModalLabel">Create a new article</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <form action="/" method="post" id="contactForm">
+                        <div class="modal-body">       
+                            <div class="form-group">
+                                <label for="name">Title:</label>
+                                <input type="text" id="name" name="name" placeholder="Enter the title." class="form-control" required />
+                            </div>             
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <input type="text" id="description" name="description" placeholder="Enter the description." class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="full">Full-body:</label>
+                                <textarea rows="5" cols="50" id="full" name="full" form="contactForm" placeholder="Enter the article's text." class="form-control" required ></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <input type="submit" value="Post article" class="btn btn-primary" />
+                        </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        <% } %>
         <% } %>
     </div>
 </div>

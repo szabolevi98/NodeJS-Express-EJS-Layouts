@@ -10,7 +10,8 @@ router.route('/')
     layout: path.join('layouts', 'with_jumbotron'),
     title: 'Home',
     nav: '1',
-    articles: await articleModel.find().lean()
+    articles: await articleModel.find().lean(),
+    createArticle: true
   });
 })
 .post(async(req, res) => {
@@ -29,6 +30,7 @@ router.route('/')
             title: 'Home',
             nav: '1',
             articles: await articleModel.find().lean(),
+            createArticle: true,
             articleSuccess: true
           });
       } 
