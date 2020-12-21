@@ -22,6 +22,7 @@ router.route('/:id')
                 title: 'Home',
                 nav: '1',
                 articles: await articleModel.find().lean(),
+                createArticle: true,
                 articleDelete: true
               });
         } 
