@@ -14,7 +14,7 @@ router.route('/:id')
     });
 })
 .put(async(req, res) => {
-    if (req.body.password == process.env.DELETE_KEY) {
+    if (req.body.password == process.env.SECRET_KEY) {
         try {
             await articleModel.findByIdAndUpdate({ _id: req.params.id },
                 {
@@ -54,7 +54,7 @@ router.route('/:id')
     }
 })
 .delete(async(req, res) => {
-    if (req.body.password == process.env.DELETE_KEY) {
+    if (req.body.password == process.env.SECRET_KEY) {
         try {
             await articleModel.deleteOne({ _id: req.params.id });
             res.render('index', { 

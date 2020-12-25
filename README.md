@@ -7,6 +7,6 @@ Live demo: https://nodejs-express-ejs-layouts.herokuapp.com
 Create a file named ".env" in the root directory with
 ```
 DB_CONNECTION = putHereYourMongoDBConnectionString
-DELETE_KEY =  putHereSomePasswordForDelete
+SECRET_KEY =  putHereSomePasswordForDeleteAndModify
 ```
 inside or set the same `Config Vars` at Heroku's settings.
