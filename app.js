@@ -22,7 +22,7 @@ app.use('/', routes);
 
 //Connect to MongoDB
 mongoose.connect(process.env.DB_CONNECTION, 
-    { useNewUrlParser: true, useUnifiedTopology: true }, 
+    { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, 
     (err) => {
       if (err) {
           console.log('Unable to connect to the database:', err.message);

@@ -2,7 +2,8 @@
     <% articles.forEach(function(article){%>
         <div class="col-md-4 mb-2">
             <h2><%= article.name %></h2>
-            <p class="text-justify"><%= article.description %></p>
+            <p class="text-justify mb-2"><%= article.description %></p>
+            <p><i><%= article.date.toUTCString() %></i></p>
             <p><a class="btn btn-primary" href="/article/<%= article._id %>" role="button">View details &raquo;</a></p>
         </div>
     <% }); %> 
