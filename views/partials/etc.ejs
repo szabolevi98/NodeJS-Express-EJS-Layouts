@@ -12,6 +12,13 @@
         });
     </script>
 <% } %>
+<% if (locals.wrongSecretPost) { %>
+    <script>
+        $(document).ready(function(){
+            $("#myModal").modal('show');
+        });
+    </script>
+<% } %>
 <% if (locals.articleSuccess) { %>
     <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
