@@ -57,7 +57,7 @@ router.route('/')
       nav: '1',
       articles: await articleModel.find().lean(),
       createArticle: true,
-      wrongSecretModify: true,
+      wrongSecretPost: true,
       userInput: {
         name: req.body.name,
         description: req.body.description,
