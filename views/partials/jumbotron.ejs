@@ -21,15 +21,15 @@
                         <div class="modal-body">       
                             <div class="form-group">
                                 <label for="name">Title:</label>
-                                <input type="text" id="name" name="name" placeholder="Enter the title." class="form-control" value="<% if (locals.userInput) { %><%= userInput.name %><% } else { %><%= article.name %><% } %>" required />
+                                <input type="text" id="name" name="name" placeholder="Enter the title." class="form-control" value="<% if (locals.userInput) { %><%= userInput.name %><% } %>" required />
                             </div>             
                             <div class="form-group">
                                 <label for="description">Description:</label>
-                                <input type="text" id="description" name="description" placeholder="Enter the description." class="form-control" value="<% if (locals.userInput) { %><%= userInput.description %><% } else { %><%= article.description %><% } %>" required />
+                                <input type="text" id="description" name="description" placeholder="Enter the description." class="form-control" value="<% if (locals.userInput) { %><%= userInput.description %><% } %>" required />
                             </div>
                             <div class="form-group">
                                 <label for="full">Full-body:</label>
-                                <textarea rows="5" cols="50" id="full" name="full" form="contactForm" placeholder="Enter the article's text." class="form-control" required ><% if (locals.userInput) { %><%= userInput.full %><% } else { %><%= article.full.replace(/<br \/>/g, '\n') %><% } %></textarea>
+                                <textarea rows="5" cols="50" id="full" name="full" form="contactForm" placeholder="Enter the article's text." class="form-control" required ><% if (locals.userInput) { %><%= userInput.full %><% } %></textarea>
                             </div>
                             <div class="form-group">
                                   <label for="password">Password:</label>
