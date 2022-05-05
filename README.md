@@ -1,5 +1,4 @@
 # NodeJS-Express-EJS-Layouts
-Live demo: https://nodejs-express-ejs-layouts.herokuapp.com
 
 - `npm install` to install dependencies
 - `npm run dev` to start the app
